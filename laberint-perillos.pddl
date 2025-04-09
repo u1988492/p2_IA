@@ -12,7 +12,7 @@
     )
 
     (:functions
-        (usos-clau ?c clau) ; Número de usos restantes de una llave
+        (usos-clau ?c - clau) ; Número de usos restantes de una llave
     )
 
     ; Similares a los del laberinto simple
