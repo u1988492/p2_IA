@@ -18,17 +18,17 @@
     (grimmy-a loc-2-1)
     
     ; Conexiones entre ubicaciones y pasadizos
-    (connect c1323 loc-1-3 loc-2-3)
-    (connect c2122 loc-2-1 loc-2-2)
-    (connect c2223 loc-2-2 loc-2-3)
-    (connect c2324 loc-2-3 loc-2-4)
-    (connect c2232 loc-2-2 loc-3-2)
-    (connect c2333 loc-2-3 loc-3-3)
-    (connect c3233 loc-3-2 loc-3-3)
-    (connect c3242 loc-3-2 loc-4-2)
-    (connect c3343 loc-3-3 loc-4-3)
-    (connect c4243 loc-4-2 loc-4-3)
-    (connect c4344 loc-4-3 loc-4-4)
+    (connecta c1323 loc-1-3 loc-2-3)
+    (connecta c2122 loc-2-1 loc-2-2)
+    (connecta c2223 loc-2-2 loc-2-3)
+    (connecta c2324 loc-2-3 loc-2-4)
+    (connecta c2232 loc-2-2 loc-3-2)
+    (connecta c2333 loc-2-3 loc-3-3)
+    (connecta c3233 loc-3-2 loc-3-3)
+    (connecta c3242 loc-3-2 loc-4-2)
+    (connecta c3343 loc-3-3 loc-4-3)
+    (connecta c4243 loc-4-2 loc-4-3)
+    (connecta c4344 loc-4-3 loc-4-4)
     
     ; Ubicaciones de las llaves
     (clau-a clau1 loc-2-2) ; Llave roja en hab 2-2
