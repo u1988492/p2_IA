@@ -6,10 +6,10 @@ Este repositorio contiene la implementación de planificadores PDDL para resolve
 
 ## Estructura del repositorio
 
-- **lab-simple/**: Contiene el dominio `laberint.pddl` y los problemas `p1-lab.pddl`, `p2-lab.pddl`, y `p3-lab.pddl` que representan laberintos simples.
-- **lab-perillos/**: Contiene el dominio `laberint-perillos.pddl` y los problemas `p1-lab-perillos.pddl`, `p2-lab-perillos.pddl`, y `p3-lab-perillos.pddl` que representan laberintos con pasadizos peligrosos y llaves con usos limitados.
-- **resultats/**: Archivos con los resultados de ejecución de los planificadores.
-- **informe/**: Documento con el análisis detallado de los dominios, problemas, soluciones y heurísticas.
+- **LAB-SIMPLE**: Contiene el dominio `laberint.pddl` y los problemas `p1-lab.pddl`, `p2-lab.pddl`, y `p3-lab.pddl` que representan laberintos simples.
+- **LAB-PERILLOS**: Contiene el dominio `laberint-perillos.pddl` y los problemas `p1-lab-perillos.pddl`, `p2-lab-perillos.pddl`, y `p3-lab-perillos.pddl` que representan laberintos con pasadizos peligrosos y llaves con usos limitados.
+- **RESULTATS**: Archivos con los resultados de ejecución de los planificadores.
+- **INFORME**: Documento con el análisis detallado de los dominios, problemas, soluciones y heurísticas.
 
 ## Descripción de la solución
 
