@@ -1,8 +1,11 @@
 (define (domain laberint)
 
-    (:requirements :typing :negative-preconditions :conditional-effects
+    (:requirements
+        :typing
+        :negative-precondition
+        :conditional-effects
     )
-
+    
     (:types
         ubicacio color clau passadis - object
     )
@@ -10,13 +13,13 @@
     (:predicates
         ; Predicado por defecto
         (grimmy-a ?loc - ubicacio)
-
+        
         ; Conexiones entre ubicaciones y pasadizos
         (connecta ?pas - passadis ?loc1 ?loc2 - ubicacio)
 
         ; Estado del pasadizo
         (bloquejat ?pas - passadis ?col - color) ; Pasadizo bloqueado con un color
-
+        
         ; Estado de las llaves
         (clau-a ?c - clau ?loc - ubicacio) ; La llave está en una ubicación
         (te-clau ?c - clau) ; Grimmy tiene la llave
@@ -38,24 +41,21 @@
                 (connecta ?pas ?des_de ?fins_a) ; El pasadizo conecta las dos ubicaciones
                 (connecta ?pas ?fins_a ?des_de)
             )
-            (not (exists
-                    (?col - color)
-                    (bloquejat ?pas ?col))) ; El pasadizo no está bloqueado
+            (not (exists (?col - color) (bloquejat ?pas ?col))) ; El pasadizo no está bloqueado
         )
 
         :effect (and
             ; Grimmy pasa de estar en la ubicación de origen a estar en la de destino
-            (not (grimmy-a ?des_de))
-            (grimmy-a ?fins_a)
+            (not (grimmy-a ?des_de)) 
+            (grimmy-a ?fins_a) 
 
             ; Si hay tesoro en la ubicación de destino, Grimmy lo recibe
-            (when
-                (tresor-a ?fins_a)
+            (when (tresor-a ?fins_a)
                 (te-tresor)
             )
         )
     )
-
+    
     ; Grimmy recoge la llave si no lleva ninguna encima y está en la ubicación de la llave que se quiere recoger
     (:action recollir
         :parameters (?loc - ubicacio ?c - clau)
@@ -63,9 +63,7 @@
         :precondition(and
             (grimmy-a ?loc) ; Grimmy está en la ubicación
             (clau-a ?c ?loc) ; La llave está en la ubicación 
-            (not (exists
-                    (?c2 - clau)
-                    (te-clau ?c2))) ; Grimmy no lleva ninguna llave encima
+            (not (exists (?c2 - clau) (te-clau ?c2))) ; Grimmy no lleva ninguna llave encima
         )
 
         ; La llave ya no está en la ubicación y Grimmy pasa a tenerla
@@ -103,12 +101,8 @@
             (color-clau ?c ?col) ; La llave es del color correcto
             (bloquejat ?pas ?col) ; El pasadizo está bloqueado con un candado de ese color
             (or
-                (exists
-                    (?loc2 - ubicacio)
-                    (connecta ?pas ?loc ?loc2)) ; El pasadizo conecta con la ubicación o la ubicación con el pasadizo
-                (exists
-                    (?loc2 - ubicacio)
-                    (connecta ?pas ?loc2 ?loc))
+                (exists (?loc2 - ubicacio) (connecta ?pas ?loc ?loc2)) ; El pasadizo conecta con la ubicación o la ubicación con el pasadizo
+                (exists (?loc2 - ubicacio) (connecta ?pas ?loc2 ?loc))
             )
         )
 
@@ -117,4 +111,4 @@
             (not (bloquejat ?pas ?col))
         )
     )
-)
+)    

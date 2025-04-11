@@ -1,0 +1,55 @@
+! ====== ! Warning: Unknown planner configuration. Going with default: gbfs with hadd ! ====== !
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 740
+Aibr Preprocessing
+|F|:190
+|X|:0
+|A|:258
+|P|:0
+|E|:0
+H1 Setup Time (msec): 37
+Setting horizon to:NaN
+Running Greedy Best First Search
+h(n = s_0)=245.0
+ g(n)= 1.0 h(n)=207.0
+ g(n)= 2.0 h(n)=162.0
+ g(n)= 3.0 h(n)=117.0
+ g(n)= 4.0 h(n)=72.0
+ g(n)= 5.0 h(n)=42.0
+ g(n)= 6.0 h(n)=27.0
+ g(n)= 7.0 h(n)=17.0
+ g(n)= 8.0 h(n)=12.0
+ g(n)= 9.0 h(n)=7.0
+ g(n)= 10.0 h(n)=5.0
+ g(n)= 11.0 h(n)=3.0
+ g(n)= 12.0 h(n)=1.0
+ g(n)= 13.0 h(n)=0.0
+Problem Solved
+
+Found Plan:
+0.0: (recollir loc-1-2 clau1)
+1.0: (moure loc-1-2 loc-2-2 c1222)
+2.0: (moure loc-2-2 loc-2-3 c2223)
+3.0: (moure loc-2-3 loc-3-3 c2333)
+4.0: (desbloquejar loc-3-3 c3233 vermell clau1)
+5.0: (moure loc-3-3 loc-3-2 c3233)
+6.0: (desbloquejar loc-3-2 c3243 vermell clau1)
+7.0: (moure loc-3-2 loc-4-3 c3243)
+8.0: (moure loc-4-3 loc-4-4 c4443)
+9.0: (deixar loc-4-4 clau1)
+10.0: (recollir loc-4-4 clau6)
+11.0: (desbloquejar loc-4-4 c3444 multicolor clau6)
+12.0: (moure loc-4-4 loc-3-4 c3444)
+
+Plan-Length:13
+Metric (Search):13.0
+Planning Time (msec): 1750
+Heuristic Time (msec): 26
+Search Time (msec): 79
+Expanded Nodes:14
+States Evaluated:38
+Fixed constraint violations during search (zero-crossing):0
+Number of Dead-Ends detected:0
+Number of Duplicates detected:11
