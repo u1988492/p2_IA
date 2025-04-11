@@ -54,6 +54,6 @@ Los resultados muestran cómo las restricciones adicionales en los laberintos pe
 
 Se ha realizado un análisis de los heurísticos h^+, h^max y hadd, comparando sus estimaciones con los planes reales generados.
 
-## Autor
+## Autora
 
 Claudia Rebeca Hodoroga (u1988492)
