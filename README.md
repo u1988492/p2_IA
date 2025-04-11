@@ -1,4 +1,6 @@
-# p2_IA
+# Intel·ligència artificial (2024/2025)
+
+# Práctica 2
 
 # Planificación con PDDL: Laberintos de Grimmy
 
