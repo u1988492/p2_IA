@@ -2,8 +2,6 @@
 
 # Práctica 2
 
-# Planificación con PDDL: Laberintos de Grimmy
-
 Este repositorio contiene la implementación de planificadores PDDL para resolver problemas de laberintos, donde Grimmy debe navegar a través de diferentes ubicaciones, recoger llaves, desbloquear pasadizos y obtener un tesoro.
 
 ## Estructura del repositorio
